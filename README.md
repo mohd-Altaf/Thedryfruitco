@@ -49,4 +49,4 @@ Hosted using GitHub Pages.
 
 ## Live Preview
 
-Visit: https://mohd-altaf.github.io/thedryfruitco/
+Visit: https:https://mohd-altaf.github.io/Thedryfruitco/
