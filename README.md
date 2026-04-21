@@ -2,7 +2,7 @@
 
 Welcome to the official repository for **The Dry Fruit Co** website.
 
-🌐 **Live Website:** https://mohd-altaf.github.io/thedryfruitco/
+🌐 **Live Website:** [https://mohd-altaf.github.io/Thedryfruitco/](https://mohd-altaf.github.io/Thedryfruitco/)
 
 ## About
 
