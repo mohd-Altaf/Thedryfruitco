@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - The Dry Fruit Co.</title>
+    <meta name="description"
+        content="Shop our premium dry fruits and natural essentials directly sourced from Kashmir farms.">
+    <link rel="icon" href="images/logo.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="images/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="logo" href="index.html#home">
+                <span class="logo-mark">
+                    <img src="images/logo.jpg" alt="The Dry Fruit Co. logo">
+                </span>
+                <span class="logo-text-group">
+                    <span class="logo-text">The Dry Fruit Co.</span>
+                    <span class="logo-subtext">Pure by Nature. Bold by Choice.</span>
+                </span>
+            </a>
+
+            <div class="search-container">
+                <input type="text" id="product-search" class="search-input" placeholder="Search products...">
+                <button class="search-btn" onclick="searchProducts()" aria-label="Search products">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="currentColor"
+                            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                    </svg>
+                </button>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false"
+                aria-controls="site-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" id="site-nav">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#products">Products</a>
+                <a href="shop.html">Shop</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section class="products section" id="shop-products">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="section-kicker">Our Products</p>
+                    <h2>Explore Our Exciting Offers</h2>
+                </div>
+
+                <div class="product-grid">
+
+                    <article class="product-card reveal">
+                        <div class="product-image image-almonds"></div>
+                        <div class="product-body">
+                            <h3>California Almonds</h3>
+                            <p>Farm-direct almonds with a rich taste, natural crunch, and premium freshness.</p>
+                            <p class="product-price"><strong>Price on inquiry</strong></p>
+                            <button class="btn btn-whatsapp"
+                                onclick="orderNow('California Almonds', 'image-almonds')"
+                                aria-label="Order on WhatsApp">
+                                
+                                Order Now
+                            </button>
+                        </div>
+                    </article>
+                    
+                    <article class="product-card featured reveal">
+                        <div class="featured-badge">Featured</div>
+                        <div class="product-image image-walnut"></div>
+                        <div class="product-body">
+                            <h3>Walnut shell (large and jumbo)</h3>
+                            <p>Our highlighted favorite, sourced for freshness, texture, and the distinct taste of
+                                Kashmir.</p>
+                            <p class="product-price"><strong>Price on inquiry</strong></p>
+                            <button class="btn btn-whatsapp" onclick="orderNow('Walnut shell (large and jumbo)', 'image-walnut')"
+                                aria-label="Order on WhatsApp">
+                                Order Now
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal">
+                        <div class="product-image image-almonds"></div>
+                        <div class="product-body">
+                            <h3>Kashmir Almonds (Mamra)</h3>
+                            <p>Farm-direct almonds with a rich taste, natural crunch, and premium freshness.</p>
+                            <p class="product-price"><strong>Price on inquiry</strong></p>
+                            <button class="btn btn-whatsapp"
+                                onclick="orderNow('Kashmir Almonds (Mamra)', 'image-almonds')"
+                                aria-label="Order on WhatsApp">
+                                
+                                Order Now
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal">
+                        <div class="product-image image-saffron"></div>
+                        <div class="product-body">
+                            <h3>Saffron (Irani)</h3>
+                            <p>Elegant aroma, vibrant color, and authentic Kashmiri character in every strand.</p>
+                            <p class="product-price"><strong>Price on inquiry</strong></p>
+                            <button class="btn btn-whatsapp" onclick="orderNow('Saffron (Irani)', 'image-saffron')"
+                                aria-label="Order on WhatsApp">
+                                Order Now
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal">
+                        <div class="product-image image-saffron"></div>
+                        <div class="product-body">
+                            <h3>Saffron (kashmiri)</h3>
+                            <p>Elegant aroma, vibrant color, and authentic Kashmiri character in every strand.</p>
+                            <p class="product-price"><strong>Price on inquiry</strong></p>
+                            <button class="btn btn-whatsapp" onclick="orderNow('Saffron (kashmiri)', 'image-saffron')"
+                                aria-label="Order on WhatsApp">
+                                Order Now
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal">
+                        <div class="product-image image-saffron"></div>
+                        <div class="product-body">
+                            <h3>Honey (south india)</h3>
+                            <p>Elegant aroma, vibrant color, and authentic Kashmiri character in every strand.</p>
+                            <p class="product-price"><strong>Price on inquiry</strong></p>
+                            <button class="btn btn-whatsapp" onclick="orderNow('Honey (south india)', 'image-saffron')"
+                                aria-label="Order on WhatsApp">
+                                Order Now
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal">
+                        <div class="product-image image-saffron"></div>
+                        <div class="product-body">
+                            <h3>Honey kashmiri</h3>
+                            <p>five different varieties of honey</p>
+                            <p class="product-price"><strong>Price on inquiry</strong></p>
+                            <button class="btn btn-whatsapp" onclick="orderNow('Honey kashmiri', 'image-saffron')"
+                                aria-label="Order on WhatsApp">
+                                Order Now
+                            </button>
+                        </div>
+                    </article>
+              
+                    <article class="product-card reveal">
+                        <div class="product-image image-saffron"></div>
+                        <div class="product-body">
+                            <h3>anjeer</h3>
+                            <p>five different varieties of honey</p>
+                            <p class="product-price"><strong>Price on inquiry</strong></p>
+                            <button class="btn btn-whatsapp" onclick="orderNow('anjeer', 'image-saffron')"
+                                aria-label="Order on WhatsApp">
+                                Order Now
+                            </button>
+                        </div>
+                    </article>
+                     
+                     <article class="product-card reveal">
+                        <div class="product-image image-dates"></div>
+                        <div class="product-body">
+                            <h3>Dates</h3>
+                            <p>Soft, naturally sweet dates that are perfect for snacking and balanced nutrition.</p>
+                            <p class="product-price"><strong>Price on inquiry</strong></p>
+                            <button class="btn btn-whatsapp" onclick="orderNow('Dates', 'image-dates')"
+                                aria-label="Order on WhatsApp">
+                                Order Now
+                            </button>
+                        </div>
+                    </article>
+
+                    
+                    <article class="product-card reveal">
+                        <div class="product-image image-ghee"></div>
+                        <div class="product-body">
+                            <h3>pure Buffallo ghee</h3>
+                            <p>Rich, aromatic ghee with a homemade feel that adds depth to every meal.</p>
+                            <p class="product-price"><strong>Price on inquiry</strong></p>
+                            <button class="btn btn-whatsapp" onclick="orderNow('pure Buffallo ghee', 'image-ghee')"
+                                aria-label="Order on WhatsApp">
+                                Order Now
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal">
+                        <div class="product-image image-ghee"></div>
+                        <div class="product-body">
+                            <h3>pure cow ghee</h3>
+                            <p>Rich, aromatic ghee with a homemade feel that adds depth to every meal.</p>
+                            <p class="product-price"><strong>Price on inquiry</strong></p>
+                            <button class="btn btn-whatsapp" onclick="orderNow('pure cow ghee', 'image-ghee')"
+                                aria-label="Order on WhatsApp">
+                                Order Now
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal">
+                        <div class="product-image image-ghee"></div>
+                        <div class="product-body">
+                            <h3>Irani pista(Roasted and salted)</h3>
+                            <p>Rich, aromatic ghee with a homemade feel that adds depth to every meal.</p>
+                            <p class="product-price"><strong>Price on inquiry</strong></p>
+                            <button class="btn btn-whatsapp" onclick="orderNow('Irani pista(Roasted and salted)', 'image-ghee')"
+                                aria-label="Order on WhatsApp">
+                                Order Now
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal">
+                        <div class="product-image image-ghee"></div>
+                        <div class="product-body">
+                            <h3>Irani pista(salted and kernels)</h3>
+                            <p>Rich, aromatic ghee with a homemade feel that adds depth to every meal.</p>
+                            <p class="product-price"><strong>Price on inquiry</strong></p>
+                            <button class="btn btn-whatsapp" onclick="orderNow('Irani pista(salted and kernels)', 'image-ghee')"
+                                aria-label="Order on WhatsApp">
+                                Order Now
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal">
+                        <div class="product-image image-ghee"></div>
+                        <div class="product-body">
+                            <h3>cashew</h3>
+                            <p>Rich, aromatic ghee with a homemade feel that adds depth to every meal.</p>
+                            <p class="product-price"><strong>Price on inquiry</strong></p>
+                            <button class="btn btn-whatsapp" onclick="orderNow('cashew', 'image-ghee')"
+                                aria-label="Order on WhatsApp">
+                                Order Now
+                            </button>
+                        </div>
+                    </article>
+
+                    
+                    <article class="product-card reveal">
+                        <div class="product-image image-panjeri"></div>
+                        <div class="product-body">
+                            <h3>shahi Panjeri</h3>
+                            <p>A wholesome blend packed with traditional richness, energy, and comforting flavor.</p>
+                            <p class="product-price"><strong>Price on inquiry</strong></p>
+                            <button class="btn btn-whatsapp" onclick="orderNow('shahi Panjeri', 'image-panjeri')"
+                                aria-label="Order on WhatsApp">
+                                Order Now
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal">
+                        <div class="product-image image-shilajit"></div>
+                        <div class="product-body">
+                            <h3>Shilajit</h3>
+                            <p>Carefully sourced and quality checked to support your wellness routine with confidence.
+                            </p>
+                            <p class="product-price"><strong>Price on inquiry</strong></p>
+                            <button class="btn btn-whatsapp"
+                                onclick="orderNow('Shilajit', 'image-shilajit')"
+                                aria-label="Order on WhatsApp">
+                                Order Now
+                            </button>
+                        </div>
+                    </article>
+
+                     <article class="product-card reveal">
+                        <div class="product-image image-shilajit"></div>
+                        <div class="product-body">
+                            <h3>Mountain Garlic</h3>
+                            <p>Carefully sourced and quality checked to support your wellness routine with confidence.
+                            </p>
+                            <p class="product-price"><strong>Price on inquiry</strong></p>
+                            <button class="btn btn-whatsapp"
+                                onclick="orderNow('Mountain Garlic', 'image-shilajit')"
+                                aria-label="Order on WhatsApp">
+                                Order Now
+                            </button>
+                        </div>
+                    </article>
+
+                     <article class="product-card reveal">
+                        <div class="product-image image-shilajit"></div>
+                        <div class="product-body">
+                            <h3>walnut oil</h3>
+                            <p>Carefully sourced and quality checked to support your wellness routine with confidence.
+                            </p>
+                            <p class="product-price"><strong>Price on inquiry</strong></p>
+                            <button class="btn btn-whatsapp"
+                                onclick="orderNow('walnut oil', 'image-shilajit')"
+                                aria-label="Order on WhatsApp">
+                                Order Now
+                            </button>
+                        </div>
+                    </article>
+
+                     <article class="product-card reveal">
+                        <div class="product-image image-shilajit"></div>
+                        <div class="product-body">
+                            <h3>badam oil</h3>
+                            <p>Carefully sourced and quality checked to support your wellness routine with confidence.
+                            </p>
+                            <p class="product-price"><strong>Price on inquiry</strong></p>
+                            <button class="btn btn-whatsapp"
+                                onclick="orderNow('badam oil', 'image-shilajit')"
+                                aria-label="Order on WhatsApp">
+                                Order Now
+                            </button>
+                        </div>
+                    </article>
+
+                     <article class="product-card reveal">
+                        <div class="product-image image-shilajit"></div>
+                        <div class="product-body">
+                            <h3>kalonji oil</h3>
+                            <p>Carefully sourced and quality checked to support your wellness routine with confidence.
+                            </p>
+                            <p class="product-price"><strong>Price on inquiry</strong></p>
+                            <button class="btn btn-whatsapp"
+                                onclick="orderNow('kalonji oil', 'image-shilajit')"
+                                aria-label="Order on WhatsApp">
+                                Order Now
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <div class="container contact-grid">
+                <div class="contact-info reveal">
+                    <p class="section-kicker">Need Help?</p>
+                    <h2>Have questions about our products?</h2>
+                    <p>
+                        <strong>WhatsApp:</strong><br>
+                        <a href="https://wa.me/917416687074" target="_blank" rel="noreferrer"
+                            aria-label="Send WhatsApp message to +91 7416687074">Chat on WhatsApp</a>
+                    </p>
+                    <p>
+                        <strong>Email:</strong><br>
+                        <a href="mailto:imran4service@gamail.com">imran4service@gamail.com</a>
+                    </p>
+                    <p>
+                        <strong>Call:</strong><br>
+                        <a href="tel:+917416687074" aria-label="Call +91 7416687074">+91 7416687074</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-wrap">
+            <p>&copy; 2026 The Dry Fruit Co. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="https://www.youtube.com/watch?v=Ehy8dP-orSQ" target="_blank" rel="noreferrer"
+                    aria-label="YouTube">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/_thedryfruitco._?igsh=MTlzcW5waDBnbWU2Yw%3D%3D" target="_blank"
+                    rel="noreferrer" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2.25c5.385 0 9.75 4.365 9.75 9.75s-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12 6.615 2.25 12 2.25zm0 1.5a6.25 6.25 0 1 0 0 12.5A6.25 6.25 0 0 0 12 3.75zm0 1.5a4.75 4.75 0 1 1 0 9.5 4.75 4.75 0 0 1 0-9.5zM18.25 5c.69 0 1.25.56 1.25 1.25s-.56 1.25-1.25 1.25-1.25-.56-1.25-1.25.56-1.25 1.25-1.25z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <a class="call-button" href="tel:+917416687074" aria-label="Call us" title="Call us">
+       <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path fill="currentColor"
+        d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.07 21 3 13.93 3 5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+</svg>
+        <span>Call</span>
+    </a>
+
+    <a class="whatsapp-button" href="https://wa.me/917416687074" target="_blank" rel="noreferrer"
+        aria-label="Order on WhatsApp" title="Order on WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+                d="M19.05 4.94A9.84 9.84 0 0 0 12.03 2c-5.45 0-9.9 4.43-9.9 9.88 0 1.74.46 3.44 1.34 4.94L2 22l5.33-1.39a9.9 9.9 0 0 0 4.7 1.2h.01c5.45 0 9.89-4.43 9.89-9.88a9.8 9.8 0 0 0-2.88-6.99Zm-7.02 15.2h-.01a8.23 8.23 0 0 1-4.19-1.14l-.3-.18-3.16.82.84-3.08-.2-.31a8.17 8.17 0 0 1-1.26-4.37c0-4.53 3.71-8.21 8.28-8.21 2.21 0 4.28.86 5.84 2.4a8.14 8.14 0 0 1 2.42 5.81c0 4.53-3.72 8.21-8.26 8.21Zm4.5-6.15c-.25-.12-1.49-.73-1.72-.81-.23-.09-.4-.12-.57.12-.16.24-.65.8-.79.96-.15.16-.29.18-.54.06-.25-.12-1.06-.39-2.01-1.24-.74-.66-1.24-1.48-1.38-1.72-.15-.24-.02-.37.1-.49.11-.11.25-.29.37-.43.13-.15.17-.24.25-.4.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.57-.43h-.48c-.17 0-.44.06-.67.31-.23.24-.88.86-.88 2.11 0 1.24.9 2.45 1.03 2.62.12.16 1.76 2.69 4.26 3.77.59.26 1.06.41 1.43.52.6.19 1.15.16 1.58.1.48-.07 1.49-.61 1.7-1.2.21-.59.21-1.1.15-1.2-.06-.11-.22-.17-.47-.29Z" />
+        </svg>
+        <span>WhatsApp</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
