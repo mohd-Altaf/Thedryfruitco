@@ -1,4 +1,4 @@
-﻿// Mobile menu toggle for smaller screens.
+// Mobile menu toggle for smaller screens.
 const menuToggle = document.getElementById("menu-toggle");
 const siteNav = document.getElementById("site-nav");
 
@@ -124,3 +124,94 @@ if ("IntersectionObserver" in window) {
 } else {
   revealElements.forEach((element) => element.classList.add("visible"));
 }
+
+// Handle product search in shop.html
+function searchProducts() {
+  const searchInput = document.getElementById('product-search');
+  const searchTerm = searchInput.value.toLowerCase().trim();
+  const productCards = document.querySelectorAll('.product-card');
+  let visibleCount = 0;
+
+  if (!searchTerm) {
+    // If search is empty, show all products
+    productCards.forEach(card => {
+      card.style.display = '';
+    });
+    return;
+  }
+
+  productCards.forEach(card => {
+    const productName = card.querySelector('h3').textContent.toLowerCase();
+    const productDescription = card.querySelector('p').textContent.toLowerCase();
+    
+    if (productName.includes(searchTerm) || productDescription.includes(searchTerm)) {
+      card.style.display = '';
+      visibleCount++;
+    } else {
+      card.style.display = 'none';
+    }
+  });
+
+  // Show message if no products found
+  const productGrid = document.querySelector('.product-grid');
+  let noResultsMsg = document.querySelector('.no-results-message');
+  
+  if (visibleCount === 0) {
+    if (!noResultsMsg) {
+      noResultsMsg = document.createElement('div');
+      noResultsMsg.className = 'no-results-message';
+      noResultsMsg.textContent = `No products found matching "${searchInput.value}". Try another search!`;
+      productGrid.parentElement.appendChild(noResultsMsg);
+    } else {
+      noResultsMsg.textContent = `No products found matching "${searchInput.value}". Try another search!`;
+      noResultsMsg.style.display = '';
+    }
+  } else {
+    if (noResultsMsg) {
+      noResultsMsg.style.display = 'none';
+    }
+  }
+}
+
+// Allow Enter key to trigger search
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('product-search');
+  if (searchInput) {
+    searchInput.addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') {
+        searchProducts();
+      }
+    });
+  }
+});
+
+// Handle product order via WhatsApp
+function orderNow(productName, imageClass) {
+  const whatsappNumber = "917416687074";
+  const currentUrl = window.location.href.split('?')[0]; // Remove any query params
+  const baseUrl = currentUrl.substring(0, currentUrl.lastIndexOf('/'));
+  
+  // Get the background image URL from the computed style
+  const productCard = document.querySelector(`.${imageClass}`);
+  let imageUrl = '';
+  
+  if (productCard) {
+    const computedStyle = window.getComputedStyle(productCard);
+    const backgroundImage = computedStyle.backgroundImage;
+    
+    // Extract URL from url("...") format
+    if (backgroundImage && backgroundImage !== 'none') {
+      imageUrl = backgroundImage.replace(/url\(['"]?([^'"()]+)['"]?\)/g, '$1');
+      
+      // Make image URL absolute if relative
+      if (!imageUrl.startsWith('http')) {
+        imageUrl = baseUrl + '/' + imageUrl;
+      }
+    }
+  }
+  
+  const message = `Hi! I'm interested in ordering:\n\n*${productName}*${imageUrl ? `\n\nImage: ${imageUrl}` : ''}`;
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  window.open(whatsappUrl, "_blank", "noopener");
+}
+
